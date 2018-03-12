@@ -1,0 +1,20 @@
+vacío principal()
+ {int N, Z = 0, r, c;
+   hacer
+- {cout << "Ingrese un numero con mas de 3 digitos:" << endl;
+- cin >> N;
++ {  cout << "Ingrese un numero con mas de 3 digitos:" << endl;
++     cin >> N;
+   } while (N <100);
+   mientras (N> 0)
+- {r = N% 10;
+- Z = Z * 10 + r;
+- c = N / 10;
+- N = c;
++ {  r = N% 10;
++     Z = Z * 10 + r;
++     c = N / 10;
++     N = c;
+   }
+ cout << "El numero invertido es:" << endl << Z;
+ _getch ();
