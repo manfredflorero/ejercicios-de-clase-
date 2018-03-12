@@ -1,0 +1,51 @@
++ // Creando la clase
++ # pragma una vez
++ clase Triiangulos
++ {privado:
++ base flotante;
++ altura del flotador;
++ área flotante;
++
++ público:
++ Triiangulos (vacío);
++ ~ Triiangulos (vacío);
++ float calcular_area (float b, float h);
++};
++ // Creando el programa principal
++ // Triiangulos.cpp: define el punto de entrada para la aplicación de la consola.
++ //
++
++ # incluye "stdafx.h"
++ # incluye "Triiangulos.h"
++ # include <iostream>
++ # incluye "conio.h"
++ usando namespace std;
++
++
++ void principal ()
++ {Triiangulos triangulo1;
++ flotar a, b;
++ cout << "Ingrese su base:" << endl;
++ cin >> a;
++ cout << "Ingrese su altura:" << endl;
++ cin >> b;
++ cout << "La suma es:" << triangulo1.calcular_area (a, b);
++ getch ();
++	
++}
++
++
++
++ Triiangulos :: Triiangulos (vacío)
++ {
++}
++
++
++ Triiangulos :: ~ Triiangulos (vacío)
++ {
++}
++
++ flotar Triiangulos :: calcular_area (flotar b, flotar h)
++ {área = (b * h) / 2;
++ área de retorno;
++}
