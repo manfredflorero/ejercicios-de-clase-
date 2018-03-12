@@ -1,0 +1,43 @@
++ // Creando la Clase
++ # pragma una vez
++ clase Suma
++ {privado:
++ int A;
++ int B;
++ público:
++ Suma (vacío);
++ ~ Suma (vacío);
++ int calcular_suma (int a, int b);
++};
++ // Programa principal
++ # incluye "StdAfx.h"
++ # incluye "Suma.h"
++ # include <iostream>
++ # incluye "conio.h"
++ usando namespace std;
++
++ void principal ()
++ {Suma suma1;
++ int x, y;
++ cout << "Ingrese su primer numero:" << endl;
++ cin >> x;
++ cout << "Ingrese su segundo numero:" << endl;
++ cin >> y;
++ cout << "La suma es:" << suma1.calcular_suma (x, y);
++ getch ();
++
++}
++
++ Suma :: Suma (vacío)
++ {
++}
++
++
++ Suma :: ~ Suma (vacío)
++ {
++}
++ int Suma :: calcular_suma (int a, int b)
++ {int r;
++ r = a + b;
++ return r;
++}
