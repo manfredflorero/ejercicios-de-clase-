@@ -1,0 +1,53 @@
+ // Creando la clase
+ # pragma una vez
+ clase sueldos
+ {privado:
+ int empleados;
+ horas flotantes;
+ pago flotante;
+ float sueldo;
+ público:
+ sueldos (vacío);
+ ~ sueldos (void);
+ float calculo_sueldo (int e, float h, float p);
+};
+ // Creando el programa principal
+ # incluye "stdafx.h"
+ # incluye "sueldos.h"
+ # include <iostream>
+ # incluye "conio.h"
+ usando namespace std;
+
+
+ void principal ()
+ {sueldos sueldo1;
+ int emp, hora, pago;
+ cout << "Ingrese el numero de empleados:" << endl;
+ cin >> emp;
+ cout << "Ingrese horas trabajadas:" << endl;
+ cin >> hora;
+ cout << "Ingrese el pago por hora:" << endl;
+ cin >> pago;
+ cout << "El sueldo es:" << sueldo1.calculo_sueldo (emp, hora, pago);
+ _getch ();
+	
+}
+
+
+
+ sueldos :: sueldos (void)
+ {
+}
+
+
+ sueldos :: ~ sueldos (void)
+ {
+}
+ float sueldos :: calculo_sueldo (int e, float h, float p)
+ {float i = 0.13, a;
+ para (int a = 1; a <= e; a ++) 
+ {	
+ sueldo = (h * p) - ((h * p) * i);
+}
+ devolver sueldo;
+}
