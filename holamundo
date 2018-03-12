@@ -1,0 +1,13 @@
+ # incluye "stdafx.h"
+ # incluye "conio.h"
+ # include <iostream>
+ usando namespace std;
+
+
+
+ void principal ()
+ {cout << "Hola Mundo" << endl;
+ cout << "Soy Laura Melo";
+ _getch ();
+	
+}
