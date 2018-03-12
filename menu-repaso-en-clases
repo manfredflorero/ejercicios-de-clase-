@@ -1,0 +1,68 @@
++ // Menuu.cpp: define el punto de entrada para la aplicación de la consola.
++ //
++
++ # incluye "stdafx.h"
++ # incluye "conio.h"
++ # include <iostream>
++ usando namespace std;
++ void suma_digitos (int N);
++ void par (int N);
++
++ void principal ()
++ {int N, opc;
++ cout << "Ingrese un numero" << endl;
++ cin >> N;
++ hacer
++ {cout << "----- MENÚ -----" << endl;
++ cout << "[1] Suma de Digitos" << endl;
++ cout << "[2] Numeros Pares" << endl;
++ cout << "[0] Salir" << endl;
++ cin >> opc;
++ interruptor (opc)
++ {caso 1:
++ {suma_digitos (N);
++ cout << endl;
++ descanso;
++}
++ caso 2:
++ {par (N);
++ cout << endl;
++ descanso;
++}
++ caso 0:
++ {cout << "Salir" << endl;
++ cout << endl;
++}
++ predeterminado: romper;
++}
++} while (opc! = 0);
++ _getch ();
++	
++}
++ void suma_digitos (int N)
++ {int c, r, s = 0;
++ mientras (N> 0)
++ {r = N% 10;
++ s = s + r;
++ c = N / 10;
++ N = c;
++}
++ cout << "La suma es:" << s;
++ _getch ();
++}
++
++
++
++ void par (int N)
++ {int par = 0, r, c;
++ mientras (N> 0)
++ {r = N% 10;
++ if (r% 2 == 0)
++ par = par + 1;
++		
++ c = N / 10;
++ N = c;
++}
++ cout << "Tiene" << par << "numeros pares" << endl;
++ _getch ();
++}
