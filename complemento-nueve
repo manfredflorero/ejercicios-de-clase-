@@ -1,0 +1,24 @@
++ // Complemento.cpp: define el punto de entrada para la aplicación de la consola.
++ //
++ # incluye "stdafx.h"
++ # include <iostream>
++ # incluye "conio.h"
++
++ usando namespace std;
++ void principal ()
++ {int N, dig = 0, r, c, comple, p = 1;
++ hacer
++ {cout << "Ingrese un numero con mas de 3 digitos:" << endl;
++ cin >> N;
++} mientras (N <100);
++ mientras (N> 0)
++ {r = N% 10;
++ comple = 9-r;
++ dig = dig + comple * p;
++ p = p * 10;
++ c = N / 10;
++ N = c;
++}
++ cout << "El complemento es:" << endl << dig;
++ _getch ();
++}
