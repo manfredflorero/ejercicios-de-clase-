@@ -1,0 +1,26 @@
+usando namespace std;
+ vacío principal()
+ {int N, par = 0, r, c;
+ cout << "Ingrese un numero:" << endl;
+ {  int N, par = 0, r, c;
+  cout << "Ingrese un numero:" << endl;
+   cin >> N;
+mientras (N> 0)
+ { r = N% 10;
+ si (r% 2 == 0)
+ { par = par + 1;
+ }
+ c = N / 10;
+ N = c;
+}
+   mientras (N> 0)
+   { r = N% 10;
+    if (r% 2 == 0)
+     par = par + 1;
+ 
+    c = N / 10;
+  N = c;
+   }
+ cout << "Tiene" << par << "numeros pares" << endl;
+ _getch ();
+ }
