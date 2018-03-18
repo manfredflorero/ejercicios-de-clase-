@@ -1,0 +1,76 @@
+// MenuSeriesyEspecial.cpp : Defines the entry point for the console application.
+//manfred florero l 
+
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+using namespace std;
+void serie(int n);
+int fact(int n);
+void especial(int n);
+
+
+void main ()
+{	int opc,N;
+	do
+	{cout<<"**********MENU**********"<<endl;
+	 cout<<"[1] Serie "<<endl;
+	 cout<<"[2] Numero Especial "<<endl;
+	 cout<<"[0] Salir "<<endl;
+	 cin>>opc;
+	 switch(opc)
+	 {case 1:
+		{cout<<"Ingrese un numero = ";
+		 cin>>N;
+		 serie(N);
+		 cout<<endl;
+		 break;
+		}
+	 case 2:
+		 {cout<<"Ingrese un numero = ";
+		  cin>>N;
+		  especial(N);
+		  break;
+		 }
+	 case 0: 
+		 {cout <<"Salir..."<<endl;
+		  break;
+		 }
+	 default: break;
+	 }
+	}while(opc!=0);
+	_getch();
+	
+}
+void serie(int n)
+{	int s,i;
+	s=n-1;
+	for(i=0;i<=n;i++)
+	{cout <<s<<" ";
+	 s=s+n;
+	}
+}
+int fact(int n)
+{	int i,f=1;
+	for(i=1;i<=n;i++)
+	{f=f*i;
+	}
+return (f);
+}
+void especial(int n)
+{	int a,r,s=0;
+	a=n;
+	while(n>0)
+	{r=n%10;
+	s=s+fact(r);
+  n=n/10;
+	}
+	cout<<"La suma es: "<<s;
+	cout<<endl;
+	if(s==a)
+	{cout<<"Por lo tanto, es un numero especial. "<<endl;
+	}
+	else
+{cout<<"Por lo tanto,no es un numero especial. "<<endl;
+	}
+}
