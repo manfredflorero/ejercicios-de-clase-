@@ -7,7 +7,7 @@
 
  void principal ()
  {cout << "Hola Mundo" << endl;
- cout << "Soy Laura Melo";
+ cout << "hola profe";
  _getch ();
 	
 }
