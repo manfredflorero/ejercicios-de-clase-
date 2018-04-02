@@ -1,0 +1,129 @@
+//matrisconclase
+#pragma once
+class Matriz
+{	private:
+	int matriz1[20][20];
+	int matriz2[20][20];
+	int n,m;
+	public:
+	Matriz(void);
+	~Matriz(void);
+	void cargar(int matriz[20][20],int n,int m);
+	void mostrar(int matriz[20][20],int n,int m);
+	void suma(int matriz1[20][20],int matriz2[20][20],int n, int m);
+};
+
+//.cpp1**************************************************************************
+#include "StdAfx.h"
+#include "Matriz.h"
+#include <iostream>
+using namespace std;
+
+
+Matriz::Matriz(void)
+{
+}
+
+
+Matriz::~Matriz(void)
+{
+}
+void Matriz::cargar(int matriz[20][20],int n,int m)
+{	int a,b;
+	for(a=0;a<n;a++)
+	{	for(b=0;b<m;b++)
+		{cout<<"MA["<<a<<"]["<<b<<"]: "<<endl;
+		cin>>matriz[a][b];
+		}
+	}
+}
+void Matriz::mostrar(int matriz[20][20],int n,int m)
+{	int a,b;
+	for(a=0;a<n;a++)
+	{	for(b=0;b<m;b++)
+		{cout<<matriz[a][b]<<"\t"; 
+		}cout<<endl;
+	}
+}
+void Matriz::suma(int matriz1[20][20],int matriz2[20][20],int n, int m)
+{	int i,j;
+	for(i=0;i<n;i++)
+	{	for(j=0;j<m;j++)
+		{cout<<matriz1[i][j]+matriz2[i][j]<<" ";
+		}
+	cout<<endl;
+	}
+}
+//cpp 2 programa principal*****************************************************************************************
+// MatrizConClases.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include "conio.h"
+#include "Matriz.h"
+#include <iostream>
+using namespace std;
+#define Max 20
+
+
+void main ()
+{	Matriz mat1, mat2;
+	int opc,M1[Max][Max],M2[Max][Max],f,c,fi,co;
+	do
+	{cout<<"Ingrese cuantas filas tendrá su matriz 1: ";
+	 cin>>f;
+	 cout<<endl;
+	}while(f<0 || f>Max);
+	do
+	{cout<<"Ingrese cuantas columnas tendrá su matriz 1: ";
+	 cin>>c;
+	 cout<<endl;
+	}while(c<0 || c>Max);
+	do
+	{cout<<"Ingrese cuantas filas tendrá su matriz 2: ";
+	 cin>>fi;
+	 cout<<endl;
+	}while(fi<0 || fi>Max);
+	do
+	{cout<<"Ingrese cuantas columnas tendrá su matriz 2: ";
+	 cin>>co;
+	 cout<<endl;
+	}while(co<0 || co>Max);
+	do
+	{cout<<"----------MENU----------"<<endl;
+	 cout<<"[1] Cargar sus matricez "<<endl;
+	 cout<<"[2] Mostrar sus matricez "<<endl;
+	 cout<<"[3] Sumar sus matricez "<<endl;
+	 cout<<"[0] Salir "<<endl;
+	 cout<<"Elija una opcion: ";
+	 cin>>opc;
+	 switch(opc)
+	 {case 1:
+		{mat1.cargar(M1,f,c);
+		 mat2.cargar(M2,fi,co);
+		 break;
+		}
+	 case 2:
+		 {cout<<"La matriz 1: "<<endl;
+		  mat1.mostrar(M1,f,c);
+		  cout<<"La matriz 1: "<<endl;
+		  mat2.mostrar(M2,fi,co);
+		  break;
+		 }
+	 case 3:
+		 {cout<<"La suma es: "<<endl;
+		  mat1.suma(M1,M2,f,c);
+		  break;
+		 }
+	 case 0: 
+		 {cout<<"Saliendo"<<endl;
+		  break;
+		 }
+	 default: 
+		 {cout<<"Opcion Invalida"<<endl;
+		  break;
+		 }
+	 }
+	}while(opc!=0);
+	getch();
+}
